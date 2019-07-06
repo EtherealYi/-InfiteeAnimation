@@ -1,0 +1,6 @@
+framework module Pods_InfiteeAnimationUITests {
+  umbrella header "Pods-InfiteeAnimationUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,824 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		214CBB589A66DCD092B56EA6 /* Pods_InfiteeAnimationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99E1EAC1828FCB04243662D /* Pods_InfiteeAnimationTests.framework */; };
+		73AECFEBE13DB3A270BF824F /* Pods_InfiteeAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3CFC7999181446433D7B99 /* Pods_InfiteeAnimation.framework */; };
+		D600BC7D22CF58EA001E9D73 /* INFAddSelectMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D600BC7C22CF58EA001E9D73 /* INFAddSelectMenuView.swift */; };
+		D61001F922C46D3F00DD16AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61001F822C46D3F00DD16AA /* AppDelegate.swift */; };
+		D61001FB22C46D3F00DD16AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61001FA22C46D3F00DD16AA /* ViewController.swift */; };
+		D61001FE22C46D3F00DD16AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D61001FC22C46D3F00DD16AA /* Main.storyboard */; };
+		D610020022C46D4000DD16AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D61001FF22C46D4000DD16AA /* Assets.xcassets */; };
+		D610020322C46D4000DD16AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D610020122C46D4000DD16AA /* LaunchScreen.storyboard */; };
+		D610020E22C46D4000DD16AA /* InfiteeAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D610020D22C46D4000DD16AA /* InfiteeAnimationTests.swift */; };
+		D610021922C46D4000DD16AA /* InfiteeAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D610021822C46D4000DD16AA /* InfiteeAnimationUITests.swift */; };
+		D610022822C470E600DD16AA /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D610022722C470E600DD16AA /* MainTabViewController.swift */; };
+		D610022A22C471B000DD16AA /* INFNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D610022922C471B000DD16AA /* INFNavigationController.swift */; };
+		D610022D22C4971700DD16AA /* INFSearchNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D610022C22C4971700DD16AA /* INFSearchNavView.swift */; };
+		D6B2C7D422CDFB020090917F /* INFProductInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2C7D322CDFB020090917F /* INFProductInfoCell.swift */; };
+		D6CD76C322CAE2C800D882ED /* INFTabBarAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD76C222CAE2C800D882ED /* INFTabBarAnimation.swift */; };
+		D6CD76C522CAE61F00D882ED /* INFThemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD76C422CAE61F00D882ED /* INFThemeCell.swift */; };
+		D6CD76C722CAF63000D882ED /* INFThemeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD76C622CAF63000D882ED /* INFThemeSheet.swift */; };
+		D6CD76C922CAFA9200D882ED /* INFThemeMadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD76C822CAFA9200D882ED /* INFThemeMadeView.swift */; };
+		D6CD76CB22CAFAB900D882ED /* INFThemeMadeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6CD76CA22CAFAB900D882ED /* INFThemeMadeView.xib */; };
+		D6CD76CD22CB3D7F00D882ED /* INFUIViewFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD76CC22CB3D7F00D882ED /* INFUIViewFrame.swift */; };
+		D6CD76CF22CB4DA700D882ED /* INFPtoductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD76CE22CB4DA700D882ED /* INFPtoductCell.swift */; };
+		D6CD76D122CB56B700D882ED /* INFTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD76D022CB56B700D882ED /* INFTransitionAnimator.swift */; };
+		D6CD76D322CB5D3800D882ED /* INFImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD76D222CB5D3800D882ED /* INFImageTransition.swift */; };
+		D6E8A0C822CC567900BA589B /* INFBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8A0C722CC567900BA589B /* INFBaseViewController.swift */; };
+		D6E8A0CA22CC59CD00BA589B /* INFProductInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8A0C922CC59CD00BA589B /* INFProductInfoViewController.swift */; };
+		D6E8A0CC22CC868100BA589B /* INFImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8A0CB22CC868100BA589B /* INFImageViewController.swift */; };
+		D6E8A0D022CC8B6C00BA589B /* INFConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8A0CF22CC8B6C00BA589B /* INFConst.swift */; };
+		D6E8A0D222CC8BF600BA589B /* INFProductThemeImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8A0D122CC8BF600BA589B /* INFProductThemeImageCell.swift */; };
+		D9831B481B18792D8200D80C /* Pods_InfiteeAnimationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE7B44325F99F8FA9DACB15 /* Pods_InfiteeAnimationUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D610020A22C46D4000DD16AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D61001ED22C46D3F00DD16AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D61001F422C46D3F00DD16AA;
+			remoteInfo = InfiteeAnimation;
+		};
+		D610021522C46D4000DD16AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D61001ED22C46D3F00DD16AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D61001F422C46D3F00DD16AA;
+			remoteInfo = InfiteeAnimation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		26339A786158A5872C873F65 /* Pods-InfiteeAnimationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiteeAnimationUITests.release.xcconfig"; path = "Target Support Files/Pods-InfiteeAnimationUITests/Pods-InfiteeAnimationUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2B63F5955E3C3E325B973E8D /* Pods-InfiteeAnimationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiteeAnimationUITests.debug.xcconfig"; path = "Target Support Files/Pods-InfiteeAnimationUITests/Pods-InfiteeAnimationUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6ED95AC261EB20F291FD0C17 /* Pods-InfiteeAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiteeAnimation.release.xcconfig"; path = "Target Support Files/Pods-InfiteeAnimation/Pods-InfiteeAnimation.release.xcconfig"; sourceTree = "<group>"; };
+		7A3CFC7999181446433D7B99 /* Pods_InfiteeAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InfiteeAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE7B44325F99F8FA9DACB15 /* Pods_InfiteeAnimationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InfiteeAnimationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADF9669D94420ABB28A9088D /* Pods-InfiteeAnimationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiteeAnimationTests.release.xcconfig"; path = "Target Support Files/Pods-InfiteeAnimationTests/Pods-InfiteeAnimationTests.release.xcconfig"; sourceTree = "<group>"; };
+		D600BC7C22CF58EA001E9D73 /* INFAddSelectMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFAddSelectMenuView.swift; sourceTree = "<group>"; };
+		D61001F522C46D3F00DD16AA /* InfiteeAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiteeAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D61001F822C46D3F00DD16AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D61001FA22C46D3F00DD16AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D61001FD22C46D3F00DD16AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D61001FF22C46D4000DD16AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D610020222C46D4000DD16AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D610020422C46D4000DD16AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D610020922C46D4000DD16AA /* InfiteeAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfiteeAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D610020D22C46D4000DD16AA /* InfiteeAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiteeAnimationTests.swift; sourceTree = "<group>"; };
+		D610020F22C46D4000DD16AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D610021422C46D4000DD16AA /* InfiteeAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfiteeAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D610021822C46D4000DD16AA /* InfiteeAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiteeAnimationUITests.swift; sourceTree = "<group>"; };
+		D610021A22C46D4000DD16AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D610022722C470E600DD16AA /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		D610022922C471B000DD16AA /* INFNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFNavigationController.swift; sourceTree = "<group>"; };
+		D610022C22C4971700DD16AA /* INFSearchNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFSearchNavView.swift; sourceTree = "<group>"; };
+		D6B2C7D322CDFB020090917F /* INFProductInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFProductInfoCell.swift; sourceTree = "<group>"; };
+		D6CD76C222CAE2C800D882ED /* INFTabBarAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFTabBarAnimation.swift; sourceTree = "<group>"; };
+		D6CD76C422CAE61F00D882ED /* INFThemeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFThemeCell.swift; sourceTree = "<group>"; };
+		D6CD76C622CAF63000D882ED /* INFThemeSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFThemeSheet.swift; sourceTree = "<group>"; };
+		D6CD76C822CAFA9200D882ED /* INFThemeMadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFThemeMadeView.swift; sourceTree = "<group>"; };
+		D6CD76CA22CAFAB900D882ED /* INFThemeMadeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = INFThemeMadeView.xib; sourceTree = "<group>"; };
+		D6CD76CC22CB3D7F00D882ED /* INFUIViewFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFUIViewFrame.swift; sourceTree = "<group>"; };
+		D6CD76CE22CB4DA700D882ED /* INFPtoductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFPtoductCell.swift; sourceTree = "<group>"; };
+		D6CD76D022CB56B700D882ED /* INFTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFTransitionAnimator.swift; sourceTree = "<group>"; };
+		D6CD76D222CB5D3800D882ED /* INFImageTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFImageTransition.swift; sourceTree = "<group>"; };
+		D6E8A0C722CC567900BA589B /* INFBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFBaseViewController.swift; sourceTree = "<group>"; };
+		D6E8A0C922CC59CD00BA589B /* INFProductInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFProductInfoViewController.swift; sourceTree = "<group>"; };
+		D6E8A0CB22CC868100BA589B /* INFImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFImageViewController.swift; sourceTree = "<group>"; };
+		D6E8A0CF22CC8B6C00BA589B /* INFConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFConst.swift; sourceTree = "<group>"; };
+		D6E8A0D122CC8BF600BA589B /* INFProductThemeImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFProductThemeImageCell.swift; sourceTree = "<group>"; };
+		D70993373C232F15AF125670 /* Pods-InfiteeAnimationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiteeAnimationTests.debug.xcconfig"; path = "Target Support Files/Pods-InfiteeAnimationTests/Pods-InfiteeAnimationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D9141CE9589FF11BDD11F9EF /* Pods-InfiteeAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiteeAnimation.debug.xcconfig"; path = "Target Support Files/Pods-InfiteeAnimation/Pods-InfiteeAnimation.debug.xcconfig"; sourceTree = "<group>"; };
+		D99E1EAC1828FCB04243662D /* Pods_InfiteeAnimationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InfiteeAnimationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D61001F222C46D3F00DD16AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73AECFEBE13DB3A270BF824F /* Pods_InfiteeAnimation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D610020622C46D4000DD16AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				214CBB589A66DCD092B56EA6 /* Pods_InfiteeAnimationTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D610021122C46D4000DD16AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9831B481B18792D8200D80C /* Pods_InfiteeAnimationUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A4ADD91A21F6466E10723E09 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9141CE9589FF11BDD11F9EF /* Pods-InfiteeAnimation.debug.xcconfig */,
+				6ED95AC261EB20F291FD0C17 /* Pods-InfiteeAnimation.release.xcconfig */,
+				D70993373C232F15AF125670 /* Pods-InfiteeAnimationTests.debug.xcconfig */,
+				ADF9669D94420ABB28A9088D /* Pods-InfiteeAnimationTests.release.xcconfig */,
+				2B63F5955E3C3E325B973E8D /* Pods-InfiteeAnimationUITests.debug.xcconfig */,
+				26339A786158A5872C873F65 /* Pods-InfiteeAnimationUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AACAA265D693DE0D9F26A013 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A3CFC7999181446433D7B99 /* Pods_InfiteeAnimation.framework */,
+				D99E1EAC1828FCB04243662D /* Pods_InfiteeAnimationTests.framework */,
+				9AE7B44325F99F8FA9DACB15 /* Pods_InfiteeAnimationUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D61001EC22C46D3F00DD16AA = {
+			isa = PBXGroup;
+			children = (
+				D61001F722C46D3F00DD16AA /* InfiteeAnimation */,
+				D610020C22C46D4000DD16AA /* InfiteeAnimationTests */,
+				D610021722C46D4000DD16AA /* InfiteeAnimationUITests */,
+				D61001F622C46D3F00DD16AA /* Products */,
+				A4ADD91A21F6466E10723E09 /* Pods */,
+				AACAA265D693DE0D9F26A013 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D61001F622C46D3F00DD16AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D61001F522C46D3F00DD16AA /* InfiteeAnimation.app */,
+				D610020922C46D4000DD16AA /* InfiteeAnimationTests.xctest */,
+				D610021422C46D4000DD16AA /* InfiteeAnimationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D61001F722C46D3F00DD16AA /* InfiteeAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				D6CD76C122CAE29700D882ED /* Animation */,
+				D610022B22C4967100DD16AA /* View */,
+				D610022622C4708A00DD16AA /* MainVC */,
+				D61001F822C46D3F00DD16AA /* AppDelegate.swift */,
+				D61001FA22C46D3F00DD16AA /* ViewController.swift */,
+				D6E8A0C922CC59CD00BA589B /* INFProductInfoViewController.swift */,
+				D6CD76CC22CB3D7F00D882ED /* INFUIViewFrame.swift */,
+				D61001FC22C46D3F00DD16AA /* Main.storyboard */,
+				D61001FF22C46D4000DD16AA /* Assets.xcassets */,
+				D610020122C46D4000DD16AA /* LaunchScreen.storyboard */,
+				D610020422C46D4000DD16AA /* Info.plist */,
+				D6E8A0CF22CC8B6C00BA589B /* INFConst.swift */,
+			);
+			path = InfiteeAnimation;
+			sourceTree = "<group>";
+		};
+		D610020C22C46D4000DD16AA /* InfiteeAnimationTests */ = {
+			isa = PBXGroup;
+			children = (
+				D610020D22C46D4000DD16AA /* InfiteeAnimationTests.swift */,
+				D610020F22C46D4000DD16AA /* Info.plist */,
+			);
+			path = InfiteeAnimationTests;
+			sourceTree = "<group>";
+		};
+		D610021722C46D4000DD16AA /* InfiteeAnimationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D610021822C46D4000DD16AA /* InfiteeAnimationUITests.swift */,
+				D610021A22C46D4000DD16AA /* Info.plist */,
+			);
+			path = InfiteeAnimationUITests;
+			sourceTree = "<group>";
+		};
+		D610022622C4708A00DD16AA /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				D610022722C470E600DD16AA /* MainTabViewController.swift */,
+				D610022922C471B000DD16AA /* INFNavigationController.swift */,
+				D6E8A0C722CC567900BA589B /* INFBaseViewController.swift */,
+				D6E8A0CB22CC868100BA589B /* INFImageViewController.swift */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		D610022B22C4967100DD16AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D610022C22C4971700DD16AA /* INFSearchNavView.swift */,
+				D6CD76C422CAE61F00D882ED /* INFThemeCell.swift */,
+				D6CD76C622CAF63000D882ED /* INFThemeSheet.swift */,
+				D6CD76C822CAFA9200D882ED /* INFThemeMadeView.swift */,
+				D6CD76CA22CAFAB900D882ED /* INFThemeMadeView.xib */,
+				D6CD76CE22CB4DA700D882ED /* INFPtoductCell.swift */,
+				D6E8A0D122CC8BF600BA589B /* INFProductThemeImageCell.swift */,
+				D6B2C7D322CDFB020090917F /* INFProductInfoCell.swift */,
+				D600BC7C22CF58EA001E9D73 /* INFAddSelectMenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D6CD76C122CAE29700D882ED /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				D6CD76C222CAE2C800D882ED /* INFTabBarAnimation.swift */,
+				D6CD76D022CB56B700D882ED /* INFTransitionAnimator.swift */,
+				D6CD76D222CB5D3800D882ED /* INFImageTransition.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D61001F422C46D3F00DD16AA /* InfiteeAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D610021D22C46D4000DD16AA /* Build configuration list for PBXNativeTarget "InfiteeAnimation" */;
+			buildPhases = (
+				9ACABBC5F87514C190B2F34A /* [CP] Check Pods Manifest.lock */,
+				D61001F122C46D3F00DD16AA /* Sources */,
+				D61001F222C46D3F00DD16AA /* Frameworks */,
+				D61001F322C46D3F00DD16AA /* Resources */,
+				2B3BAE7AB8C96D5EBCD48A5F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InfiteeAnimation;
+			productName = InfiteeAnimation;
+			productReference = D61001F522C46D3F00DD16AA /* InfiteeAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D610020822C46D4000DD16AA /* InfiteeAnimationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D610022022C46D4000DD16AA /* Build configuration list for PBXNativeTarget "InfiteeAnimationTests" */;
+			buildPhases = (
+				709698416C5FAA7F4B86CC5C /* [CP] Check Pods Manifest.lock */,
+				D610020522C46D4000DD16AA /* Sources */,
+				D610020622C46D4000DD16AA /* Frameworks */,
+				D610020722C46D4000DD16AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D610020B22C46D4000DD16AA /* PBXTargetDependency */,
+			);
+			name = InfiteeAnimationTests;
+			productName = InfiteeAnimationTests;
+			productReference = D610020922C46D4000DD16AA /* InfiteeAnimationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D610021322C46D4000DD16AA /* InfiteeAnimationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D610022322C46D4000DD16AA /* Build configuration list for PBXNativeTarget "InfiteeAnimationUITests" */;
+			buildPhases = (
+				9C78B44BF6AF8A58BEFA411D /* [CP] Check Pods Manifest.lock */,
+				D610021022C46D4000DD16AA /* Sources */,
+				D610021122C46D4000DD16AA /* Frameworks */,
+				D610021222C46D4000DD16AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D610021622C46D4000DD16AA /* PBXTargetDependency */,
+			);
+			name = InfiteeAnimationUITests;
+			productName = InfiteeAnimationUITests;
+			productReference = D610021422C46D4000DD16AA /* InfiteeAnimationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D61001ED22C46D3F00DD16AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = INF;
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Master.Yi;
+				TargetAttributes = {
+					D61001F422C46D3F00DD16AA = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					D610020822C46D4000DD16AA = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = D61001F422C46D3F00DD16AA;
+					};
+					D610021322C46D4000DD16AA = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = D61001F422C46D3F00DD16AA;
+					};
+				};
+			};
+			buildConfigurationList = D61001F022C46D3F00DD16AA /* Build configuration list for PBXProject "InfiteeAnimation" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D61001EC22C46D3F00DD16AA;
+			productRefGroup = D61001F622C46D3F00DD16AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D61001F422C46D3F00DD16AA /* InfiteeAnimation */,
+				D610020822C46D4000DD16AA /* InfiteeAnimationTests */,
+				D610021322C46D4000DD16AA /* InfiteeAnimationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D61001F322C46D3F00DD16AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D610020322C46D4000DD16AA /* LaunchScreen.storyboard in Resources */,
+				D610020022C46D4000DD16AA /* Assets.xcassets in Resources */,
+				D61001FE22C46D3F00DD16AA /* Main.storyboard in Resources */,
+				D6CD76CB22CAFAB900D882ED /* INFThemeMadeView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D610020722C46D4000DD16AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D610021222C46D4000DD16AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B3BAE7AB8C96D5EBCD48A5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InfiteeAnimation/Pods-InfiteeAnimation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InfiteeAnimation/Pods-InfiteeAnimation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InfiteeAnimation/Pods-InfiteeAnimation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		709698416C5FAA7F4B86CC5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InfiteeAnimationTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ACABBC5F87514C190B2F34A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InfiteeAnimation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C78B44BF6AF8A58BEFA411D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InfiteeAnimationUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D61001F122C46D3F00DD16AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D61001FB22C46D3F00DD16AA /* ViewController.swift in Sources */,
+				D610022D22C4971700DD16AA /* INFSearchNavView.swift in Sources */,
+				D6CD76C922CAFA9200D882ED /* INFThemeMadeView.swift in Sources */,
+				D600BC7D22CF58EA001E9D73 /* INFAddSelectMenuView.swift in Sources */,
+				D6E8A0D022CC8B6C00BA589B /* INFConst.swift in Sources */,
+				D6CD76C322CAE2C800D882ED /* INFTabBarAnimation.swift in Sources */,
+				D610022A22C471B000DD16AA /* INFNavigationController.swift in Sources */,
+				D61001F922C46D3F00DD16AA /* AppDelegate.swift in Sources */,
+				D6E8A0CC22CC868100BA589B /* INFImageViewController.swift in Sources */,
+				D610022822C470E600DD16AA /* MainTabViewController.swift in Sources */,
+				D6E8A0C822CC567900BA589B /* INFBaseViewController.swift in Sources */,
+				D6CD76D322CB5D3800D882ED /* INFImageTransition.swift in Sources */,
+				D6B2C7D422CDFB020090917F /* INFProductInfoCell.swift in Sources */,
+				D6CD76C522CAE61F00D882ED /* INFThemeCell.swift in Sources */,
+				D6CD76CF22CB4DA700D882ED /* INFPtoductCell.swift in Sources */,
+				D6E8A0D222CC8BF600BA589B /* INFProductThemeImageCell.swift in Sources */,
+				D6CD76D122CB56B700D882ED /* INFTransitionAnimator.swift in Sources */,
+				D6E8A0CA22CC59CD00BA589B /* INFProductInfoViewController.swift in Sources */,
+				D6CD76CD22CB3D7F00D882ED /* INFUIViewFrame.swift in Sources */,
+				D6CD76C722CAF63000D882ED /* INFThemeSheet.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D610020522C46D4000DD16AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D610020E22C46D4000DD16AA /* InfiteeAnimationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D610021022C46D4000DD16AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D610021922C46D4000DD16AA /* InfiteeAnimationUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D610020B22C46D4000DD16AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D61001F422C46D3F00DD16AA /* InfiteeAnimation */;
+			targetProxy = D610020A22C46D4000DD16AA /* PBXContainerItemProxy */;
+		};
+		D610021622C46D4000DD16AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D61001F422C46D3F00DD16AA /* InfiteeAnimation */;
+			targetProxy = D610021522C46D4000DD16AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D61001FC22C46D3F00DD16AA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D61001FD22C46D3F00DD16AA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D610020122C46D4000DD16AA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D610020222C46D4000DD16AA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D610021B22C46D4000DD16AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D610021C22C46D4000DD16AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D610021E22C46D4000DD16AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9141CE9589FF11BDD11F9EF /* Pods-InfiteeAnimation.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RW4Q2R53H8;
+				INFOPLIST_FILE = InfiteeAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.infinitee.animation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D610021F22C46D4000DD16AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ED95AC261EB20F291FD0C17 /* Pods-InfiteeAnimation.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RW4Q2R53H8;
+				INFOPLIST_FILE = InfiteeAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.infinitee.animation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D610022122C46D4000DD16AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D70993373C232F15AF125670 /* Pods-InfiteeAnimationTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = InfiteeAnimationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = masteryi.InfiteeAnimationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfiteeAnimation.app/InfiteeAnimation";
+			};
+			name = Debug;
+		};
+		D610022222C46D4000DD16AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADF9669D94420ABB28A9088D /* Pods-InfiteeAnimationTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = InfiteeAnimationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = masteryi.InfiteeAnimationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfiteeAnimation.app/InfiteeAnimation";
+			};
+			name = Release;
+		};
+		D610022422C46D4000DD16AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B63F5955E3C3E325B973E8D /* Pods-InfiteeAnimationUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = InfiteeAnimationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = masteryi.InfiteeAnimationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = InfiteeAnimation;
+			};
+			name = Debug;
+		};
+		D610022522C46D4000DD16AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26339A786158A5872C873F65 /* Pods-InfiteeAnimationUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = InfiteeAnimationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = masteryi.InfiteeAnimationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = InfiteeAnimation;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D61001F022C46D3F00DD16AA /* Build configuration list for PBXProject "InfiteeAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D610021B22C46D4000DD16AA /* Debug */,
+				D610021C22C46D4000DD16AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D610021D22C46D4000DD16AA /* Build configuration list for PBXNativeTarget "InfiteeAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D610021E22C46D4000DD16AA /* Debug */,
+				D610021F22C46D4000DD16AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D610022022C46D4000DD16AA /* Build configuration list for PBXNativeTarget "InfiteeAnimationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D610022122C46D4000DD16AA /* Debug */,
+				D610022222C46D4000DD16AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D610022322C46D4000DD16AA /* Build configuration list for PBXNativeTarget "InfiteeAnimationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D610022422C46D4000DD16AA /* Debug */,
+				D610022522C46D4000DD16AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D61001ED22C46D3F00DD16AA /* Project object */;
+}
