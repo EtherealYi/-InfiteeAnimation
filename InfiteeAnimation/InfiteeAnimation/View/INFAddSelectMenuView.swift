@@ -8,61 +8,40 @@
 
 import UIKit
 
-class INFAddSelectMenuView: UIView {
+protocol INFAddSelectMenuViewDelegate: NSObjectProtocol {
+    func madeClick() -> Void
+}
 
-    var madeButton: UIButton!
-    var saleButton: UIButton!
-    var line: UIView!
+class INFAddSelectMenuView: UIView {
+    
+    @IBOutlet weak var medaView: UIView!
+    
+    weak open var delegate: INFAddSelectMenuViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.white
-        madeButton = UIButton(type: .custom)
-        madeButton.setTitle("我要定制\n购买属于自已的产品", for: .normal)
-        madeButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        madeButton.titleLabel?.numberOfLines = 0
-        madeButton.setTitleColor(UIColor.blue, for: .normal)
-        madeButton.titleLabel?.textAlignment = .center
-        addSubview(madeButton)
         
-        saleButton = UIButton(type: .custom)
-        saleButton.setTitle("我要出售\n出售我的作品获取收益", for: .normal)
-        saleButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        saleButton.titleLabel?.numberOfLines = 0
-        saleButton.setTitleColor(UIColor.red, for: .normal)
-        saleButton.titleLabel?.textAlignment = .center
-        addSubview(saleButton)
-        
-        line = UIView()
-        line.backgroundColor = UIColor.groupTableViewBackground
-        addSubview(line)
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        madeButton.snp.makeConstraints { (make) in
-            make.left.top.bottom.equalTo(self)
-            make.right.equalTo(self.saleButton.snp.left)
-            make.width.equalTo(self.saleButton.snp.width)
-        }
-        
-        saleButton.snp.makeConstraints { (make) in
-            make.left.equalTo(madeButton.snp.right)
-            make.top.right.bottom.equalTo(self)
-            make.width.equalTo(self.madeButton.snp.width)
-        }
-        
-        line.snp.makeConstraints { (make) in
-            make.centerX.equalTo(self.snp.centerX)
-            make.width.equalTo(1)
-            make.top.equalTo(self.snp.top).offset(10)
-            make.bottom.equalTo(self.snp.bottom).offset(-10)
-        }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(_medeViewClick(sender:)))
+        medaView.isUserInteractionEnabled = true
+        medaView.addGestureRecognizer(tap)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        
+
+
+    }
+    
+    @objc func _medeViewClick(sender: UIButton) -> Void {
+    
+        if (self.delegate != nil) {
+            self.delegate?.madeClick()
+        }
     }
     
 }

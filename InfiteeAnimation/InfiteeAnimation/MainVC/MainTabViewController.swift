@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainTabViewController: UITabBarController, UITabBarControllerDelegate, CAAnimationDelegate {
+class MainTabViewController: UITabBarController, UITabBarControllerDelegate, CAAnimationDelegate, INFAddSelectMenuViewDelegate{
 
     var addButton: UIButton!
     var isRotate: Bool = false
@@ -63,15 +63,19 @@ class MainTabViewController: UITabBarController, UITabBarControllerDelegate, CAA
             make.size.equalTo(CGSize(width: 60, height: 60))
         }
         
-        menuView = INFAddSelectMenuView()
+        menuView = Bundle.main.loadNibNamed("INFAddSelectMenuView", owner: nil, options: nil)?.first as? INFAddSelectMenuView
         menuView.isHidden = true
         menuView.alpha = 0
+        menuView.layer.cornerRadius = 6
+        menuView.layer.masksToBounds = true
+        menuView.layer.anchorPoint = CGPoint(x: 0.5, y: 0.6)
+        menuView.delegate = self
         self.view.addSubview(menuView)
         menuView.snp.makeConstraints { (make) in
             make.height.equalTo(100)
             make.width.equalTo(300)
             make.centerX.equalTo(self.view.snp.centerX)
-            make.bottom.equalTo(addButton.snp.top).offset(-4)
+            make.bottom.equalTo(addButton.snp.top).offset(-20)
         }
         
     }
@@ -90,6 +94,15 @@ class MainTabViewController: UITabBarController, UITabBarControllerDelegate, CAA
         
 //        return DCSlideBarAnimation() //滑动动画
         return nil
+    }
+    
+    //MARK: INFAddSelectMenuViewDelegate
+    func madeClick() {
+        let vc = INFSelectMenuViewController()
+        self.present(vc, animated: true) {
+            
+        }
+        self.addButtonClick(sender: self.addButton)
     }
   
 }
@@ -123,11 +136,21 @@ extension MainTabViewController {
         if isShow {
             maskView.isHidden = false
             menuView.isHidden = false
-            
+            self.menuView.transform = CGAffineTransform(scaleX: 0, y: 0)
+        }else{
+            self.menuView.transform = CGAffineTransform(scaleX: 1, y: 1)
         }
+        
+        
         UIView.animate(withDuration: 0.4, animations: {
             self.maskView.alpha = isShow ? 1 : 0
             self.menuView.alpha = isShow ? 1 : 0
+            if isShow {
+               self.menuView.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }else{
+                self.menuView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            }
+            
         }) { (_) in
             if !isShow {
                 self.maskView.isHidden = true

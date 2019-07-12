@@ -150,7 +150,7 @@ extension ViewController {
             return CGSize(width: width, height: cellHeight)
         default:
             let width = (collectionView.frame.size.width - 15*2 - 15)/2
-            return CGSize(width: width, height: 220)
+            return CGSize(width: width, height: width+50)
         }
         
     }
