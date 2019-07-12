@@ -27,7 +27,7 @@ class MainTabViewController: UITabBarController, UITabBarControllerDelegate, CAA
         let addNav = INFNavigationController(rootViewController: addVc)
         addChildController(vc: addNav, title: "")
         
-        let myVC = UIViewController()
+        let myVC = INFMineViewController()
         let myNav = INFNavigationController(rootViewController: myVC)
         addChildController(vc: myNav, title: "个人中心")
         
@@ -122,13 +122,13 @@ extension MainTabViewController {
         }
         isShow = !isShow
         showMaskView(isShow: isShow)
-        rotateAnimation.duration = 0.4
+        rotateAnimation.duration = 0.3
+        rotateAnimation.timingFunction = CAMediaTimingFunction(name: .easeOut)
         rotateAnimation.fillMode = .forwards
         rotateAnimation.isRemovedOnCompletion = false
-        
         addButton.layer.add(rotateAnimation, forKey: "")
         
-        
+
     }
     
     func showMaskView(isShow: Bool) -> Void {
@@ -141,8 +141,8 @@ extension MainTabViewController {
             self.menuView.transform = CGAffineTransform(scaleX: 1, y: 1)
         }
         
-        
-        UIView.animate(withDuration: 0.4, animations: {
+    
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.85, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
             self.maskView.alpha = isShow ? 1 : 0
             self.menuView.alpha = isShow ? 1 : 0
             if isShow {
@@ -150,7 +150,6 @@ extension MainTabViewController {
             }else{
                 self.menuView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
             }
-            
         }) { (_) in
             if !isShow {
                 self.maskView.isHidden = true

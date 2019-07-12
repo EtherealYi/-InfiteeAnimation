@@ -60,5 +60,6 @@ class INFSelectMenuCell: UITableViewCell {
         group.isRemovedOnCompletion = false
         menuLabel.layer.add(group, forKey: "")
         
+        
     }
 }
