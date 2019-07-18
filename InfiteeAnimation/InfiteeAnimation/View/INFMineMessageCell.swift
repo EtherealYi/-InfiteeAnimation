@@ -8,8 +8,11 @@
 
 import UIKit
 
+
+
 class INFMineMessageCell: UITableViewCell {
 
+    @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var centerView: UIView!
     @IBOutlet weak var reedButton: UIButton!
     override func awakeFromNib() {
@@ -31,4 +34,6 @@ class INFMineMessageCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func readButtonClick(_ sender: UIButton) {
+    }
 }

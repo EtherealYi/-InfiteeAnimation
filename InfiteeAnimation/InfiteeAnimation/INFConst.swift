@@ -11,3 +11,5 @@ import UIKit
 let kThemeImageHeight = UIScreen.main.bounds.width/3
 
 let kProductImageHeight = UIScreen.main.bounds.width
+
+let kNotificationHiddenBarBottom = "kNotificationHiddenBarBottom"

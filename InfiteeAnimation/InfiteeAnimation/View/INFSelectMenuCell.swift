@@ -48,11 +48,10 @@ class INFSelectMenuCell: UITableViewCell {
         animation.toValue = self.width/2
         
         let alphaAnimation = CABasicAnimation()
-        alphaAnimation.keyPath = "alpha"
+        alphaAnimation.keyPath = "opacity"
         alphaAnimation.fromValue = 0
         alphaAnimation.toValue = 1
 
-        
         let group = CAAnimationGroup()
         group.animations = [animation, alphaAnimation]
         group.duration = menuModel!.delayTime

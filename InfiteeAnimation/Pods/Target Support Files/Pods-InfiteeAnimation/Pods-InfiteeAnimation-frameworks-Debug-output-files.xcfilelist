@@ -1,2 +1,3 @@
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework
 ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullToRefreshKit.framework
 ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework

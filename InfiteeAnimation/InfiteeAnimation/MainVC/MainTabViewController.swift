@@ -7,39 +7,70 @@
 //
 
 import UIKit
+import ESTabBarController_swift
 
-class MainTabViewController: UITabBarController, UITabBarControllerDelegate, CAAnimationDelegate, INFAddSelectMenuViewDelegate{
+class MainTabViewController: ESTabBarController, UITabBarControllerDelegate, CAAnimationDelegate, INFAddSelectMenuViewDelegate{
 
     var addButton: UIButton!
     var isRotate: Bool = false
     var isShow: Bool = false
     var maskView: UIVisualEffectView!
     var menuView: INFAddSelectMenuView!
+    var centerImageView: UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(hiddTarBarBottom(notification:)), name: Notification.Name(rawValue: kNotificationHiddenBarBottom), object: nil)
+        setupUI()
+        
+        shouldHijackHandler = { tabbarController, viewController, index in
+            if index == 1 {
+                return true
+            }
+            return false
+        }
+        self.didHijackHandler = {
+            [weak self] tabbarController, viewController, index in
+            
+//            self?.centerImageViewClick(sender: (self?.centerImageView)!)
+            self?.addButtonClick(sender: self!.addButton)
+        }
+        
         let homeVc = ViewController()
         let nav = INFNavigationController(rootViewController: homeVc)
-        self.addChildController(vc: nav, title: "首页")
+        addChildController(vc: nav, title: "首页", imageName: "home", selectImage: "home_select", isCenter: false, tag: 0)
         
         let addVc = INFBaseViewController()
-        let addNav = INFNavigationController(rootViewController: addVc)
-        addChildController(vc: addNav, title: "")
+//        addChildController(vc: addNav, title: "", imageName: "addButton", selectImage: nil, isCenter: true, tag: 1)
+        addChildController(vc: addVc, title: "", imageName: nil, selectImage: nil, isCenter: false, tag: 1)
         
         let myVC = INFMineViewController()
         let myNav = INFNavigationController(rootViewController: myVC)
-        addChildController(vc: myNav, title: "个人中心")
+        addChildController(vc: myNav, title: "个人中心", imageName: "personal", selectImage: "personal_select", isCenter: false, tag: 2)
         
-        setupAddButton()
+        
     }
     
-    func addChildController<T: UIViewController>(vc: T, title: String) -> Void {
-        vc.tabBarItem.title = title
+    func addChildController<T: UIViewController>(vc: T, title: String, imageName: String?, selectImage: String?,isCenter: Bool, tag: Int) -> Void {
+     
+        let contentView = ESTabBarItemContentView()
+        
+        vc.tabBarItem = ESTabBarItem.init(contentView, title: title, image: UIImage(named: imageName ?? ""), selectedImage: UIImage(named: selectImage ?? ""), tag: tag)
+        
+        if isCenter {
+            centerImageView = contentView.imageView
+            contentView.renderingMode = .alwaysOriginal
+            contentView.itemContentMode = .alwaysOriginal
+            contentView.imageView.sizeToFit()
+            contentView.insets = UIEdgeInsets(top: -32, left: 0, bottom: 0, right: 0)
+        }
+        if tag == 0 {
+            contentView.selected = true
+        }
         self.addChild(vc)
     }
     
-    func setupAddButton() -> Void {
+    func setupUI() -> Void {
         // 蒙版View
 //        let window = UIApplication.shared.keyWindow
         let blurEffect = UIBlurEffect(style: .extraLight)
@@ -50,17 +81,15 @@ class MainTabViewController: UITabBarController, UITabBarControllerDelegate, CAA
         maskView.snp.makeConstraints { (make) in
             make.edges.equalTo(self.view)
         }
-        
-        // 中间按钮
+
         addButton = UIButton(type: .custom)
         addButton.setImage(UIImage(named: "addButton"), for: .normal)
-        addButton.setImage(UIImage(named: "addButton"), for: .highlighted)
         addButton.addTarget(self, action: #selector(addButtonClick(sender:)), for: .touchUpInside)
         self.view.addSubview(addButton)
         addButton.snp.makeConstraints { (make) in
-            make.centerX.equalTo(self.tabBar.snp.centerX)
-            make.top.equalTo(self.tabBar.snp.top).offset(-5)
+            make.centerX.equalTo(view)
             make.size.equalTo(CGSize(width: 60, height: 60))
+            make.bottom.equalTo(view).offset(-32)
         }
         
         menuView = Bundle.main.loadNibNamed("INFAddSelectMenuView", owner: nil, options: nil)?.first as? INFAddSelectMenuView
@@ -75,26 +104,11 @@ class MainTabViewController: UITabBarController, UITabBarControllerDelegate, CAA
             make.height.equalTo(100)
             make.width.equalTo(300)
             make.centerX.equalTo(self.view.snp.centerX)
-            make.bottom.equalTo(addButton.snp.top).offset(-20)
+            make.bottom.equalTo(self.tabBar.snp.top).offset(-32)
         }
         
     }
-    
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        
-        
-    }
-    
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        
-        return !(viewController == tabBarController.viewControllers![1])
-    }
-    
-    func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        
-//        return DCSlideBarAnimation() //滑动动画
-        return nil
-    }
+ 
     
     //MARK: INFAddSelectMenuViewDelegate
     func madeClick() {
@@ -102,15 +116,56 @@ class MainTabViewController: UITabBarController, UITabBarControllerDelegate, CAA
         self.present(vc, animated: true) {
             
         }
-        self.addButtonClick(sender: self.addButton)
+        self.addButtonClick(sender: addButton)
     }
   
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 }
 
 extension MainTabViewController {
+    
+    @objc private func hiddTarBarBottom(notification: Notification) -> Void {
+        if let dict: Dictionary = notification.object as? [String:String] {
+            let operantion = dict["operation"]
+            if operantion == "fromBottom" {
+                if addButton.width <= 0 || addButton.height <= 0 {
+                    return
+                }
+                let positionAnim = CABasicAnimation(keyPath: "position.y")
+                positionAnim.duration = 0.4
+                positionAnim.fromValue = addButton.layer.position.y
+                positionAnim.toValue = UIScreen.main.bounds.height + 30
+                positionAnim.timingFunction =  CAMediaTimingFunction(name: .easeOut)
+                positionAnim.fillMode = .forwards
+                positionAnim.isRemovedOnCompletion = false
+                addButton.layer.add(positionAnim, forKey: "fromBottom")
+               
+                
+            }else if operantion == "fromTop" {
+                if addButton.width < 0 || addButton.height < 0 {
+                    return
+                }
+                let positionAnim = CABasicAnimation(keyPath: "position.y")
+                positionAnim.duration = 0.4
+                positionAnim.fromValue = UIScreen.main.bounds.height + 30
+                positionAnim.toValue = UIScreen.main.bounds.height - 62
+                positionAnim.timingFunction = CAMediaTimingFunction(name: .easeOut)
+                positionAnim.fillMode = .forwards
+                positionAnim.isRemovedOnCompletion = false
+                addButton.layer.add(positionAnim, forKey: "fromTop")
+            }
+            
+            
+        }
+    }
+    
+    //MARK: 按钮动画
     @objc func addButtonClick(sender: UIButton) -> Void {
         addButton.isUserInteractionEnabled = false
         let rotateAnimation = CABasicAnimation()
+//        let rotateAnimation = CASpringAnimation()
         rotateAnimation.keyPath = "transform.rotation.z"
         rotateAnimation.delegate = self
         if isRotate {
@@ -120,15 +175,14 @@ extension MainTabViewController {
             rotateAnimation.fromValue = 0
             rotateAnimation.toValue = Double.pi / 4
         }
-        isShow = !isShow
-        showMaskView(isShow: isShow)
         rotateAnimation.duration = 0.3
-        rotateAnimation.timingFunction = CAMediaTimingFunction(name: .easeOut)
+        rotateAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
         rotateAnimation.fillMode = .forwards
         rotateAnimation.isRemovedOnCompletion = false
         addButton.layer.add(rotateAnimation, forKey: "")
         
-
+        isShow = !isShow
+        showMaskView(isShow: isShow)
     }
     
     func showMaskView(isShow: Bool) -> Void {

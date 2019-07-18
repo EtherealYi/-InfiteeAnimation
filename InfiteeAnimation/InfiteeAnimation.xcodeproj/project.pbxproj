@@ -10,6 +10,9 @@
 		214CBB589A66DCD092B56EA6 /* Pods_InfiteeAnimationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99E1EAC1828FCB04243662D /* Pods_InfiteeAnimationTests.framework */; };
 		73AECFEBE13DB3A270BF824F /* Pods_InfiteeAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3CFC7999181446433D7B99 /* Pods_InfiteeAnimation.framework */; };
 		D60077DD22D815B5000B17F5 /* INFSelectMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60077DC22D815B5000B17F5 /* INFSelectMenuCell.swift */; };
+		D60077E222D83486000B17F5 /* INFMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60077E122D83486000B17F5 /* INFMineViewController.swift */; };
+		D60077E522D83536000B17F5 /* INFMineMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60077E322D83536000B17F5 /* INFMineMessageCell.swift */; };
+		D60077E622D83536000B17F5 /* INFMineMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60077E422D83536000B17F5 /* INFMineMessageCell.xib */; };
 		D600BC7D22CF58EA001E9D73 /* INFAddSelectMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D600BC7C22CF58EA001E9D73 /* INFAddSelectMenuView.swift */; };
 		D61001F922C46D3F00DD16AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61001F822C46D3F00DD16AA /* AppDelegate.swift */; };
 		D61001FB22C46D3F00DD16AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61001FA22C46D3F00DD16AA /* ViewController.swift */; };
@@ -36,6 +39,8 @@
 		D6CD76CF22CB4DA700D882ED /* INFPtoductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD76CE22CB4DA700D882ED /* INFPtoductCell.swift */; };
 		D6CD76D122CB56B700D882ED /* INFTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD76D022CB56B700D882ED /* INFTransitionAnimator.swift */; };
 		D6CD76D322CB5D3800D882ED /* INFImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD76D222CB5D3800D882ED /* INFImageTransition.swift */; };
+		D6D2F58B22DC6C41003D5015 /* INFMineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D2F58A22DC6C41003D5015 /* INFMineHeaderView.swift */; };
+		D6D2F58D22DC763C003D5015 /* INFFrameAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D2F58C22DC763C003D5015 /* INFFrameAnimator.swift */; };
 		D6E8A0C822CC567900BA589B /* INFBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8A0C722CC567900BA589B /* INFBaseViewController.swift */; };
 		D6E8A0CA22CC59CD00BA589B /* INFProductInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8A0C922CC59CD00BA589B /* INFProductInfoViewController.swift */; };
 		D6E8A0CC22CC868100BA589B /* INFImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8A0CB22CC868100BA589B /* INFImageViewController.swift */; };
@@ -72,6 +77,9 @@
 		9AE7B44325F99F8FA9DACB15 /* Pods_InfiteeAnimationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InfiteeAnimationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF9669D94420ABB28A9088D /* Pods-InfiteeAnimationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiteeAnimationTests.release.xcconfig"; path = "Target Support Files/Pods-InfiteeAnimationTests/Pods-InfiteeAnimationTests.release.xcconfig"; sourceTree = "<group>"; };
 		D60077DC22D815B5000B17F5 /* INFSelectMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFSelectMenuCell.swift; sourceTree = "<group>"; };
+		D60077E122D83486000B17F5 /* INFMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFMineViewController.swift; sourceTree = "<group>"; };
+		D60077E322D83536000B17F5 /* INFMineMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFMineMessageCell.swift; sourceTree = "<group>"; };
+		D60077E422D83536000B17F5 /* INFMineMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = INFMineMessageCell.xib; sourceTree = "<group>"; };
 		D600BC7C22CF58EA001E9D73 /* INFAddSelectMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFAddSelectMenuView.swift; sourceTree = "<group>"; };
 		D61001F522C46D3F00DD16AA /* InfiteeAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiteeAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61001F822C46D3F00DD16AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +112,8 @@
 		D6CD76CE22CB4DA700D882ED /* INFPtoductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFPtoductCell.swift; sourceTree = "<group>"; };
 		D6CD76D022CB56B700D882ED /* INFTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFTransitionAnimator.swift; sourceTree = "<group>"; };
 		D6CD76D222CB5D3800D882ED /* INFImageTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFImageTransition.swift; sourceTree = "<group>"; };
+		D6D2F58A22DC6C41003D5015 /* INFMineHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFMineHeaderView.swift; sourceTree = "<group>"; };
+		D6D2F58C22DC763C003D5015 /* INFFrameAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFFrameAnimator.swift; sourceTree = "<group>"; };
 		D6E8A0C722CC567900BA589B /* INFBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFBaseViewController.swift; sourceTree = "<group>"; };
 		D6E8A0C922CC59CD00BA589B /* INFProductInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFProductInfoViewController.swift; sourceTree = "<group>"; };
 		D6E8A0CB22CC868100BA589B /* INFImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFImageViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +178,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D60077DE22D83423000B17F5 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				D60077E022D83463000B17F5 /* 个人中心 */,
+				D60077DF22D8345D000B17F5 /* 首页 */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		D60077DF22D8345D000B17F5 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				D61001FA22C46D3F00DD16AA /* ViewController.swift */,
+				D6E8A0C922CC59CD00BA589B /* INFProductInfoViewController.swift */,
+				D6F044D122D0A2F100383ACE /* INFSelectMenuViewController.swift */,
+				D6F044D322D0A39C00383ACE /* INFSelectMenuTableViewController.swift */,
+				D6A3D27B22D5C01F00805F98 /* INFMenuProductController.swift */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		D60077E022D83463000B17F5 /* 个人中心 */ = {
+			isa = PBXGroup;
+			children = (
+				D60077E122D83486000B17F5 /* INFMineViewController.swift */,
+			);
+			path = "个人中心";
+			sourceTree = "<group>";
+		};
 		D61001EC22C46D3F00DD16AA = {
 			isa = PBXGroup;
 			children = (
@@ -193,17 +232,13 @@
 		D61001F722C46D3F00DD16AA /* InfiteeAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				D60077DE22D83423000B17F5 /* Module */,
 				D64C551522D7158100A01C07 /* Model */,
 				D6CD76C122CAE29700D882ED /* Animation */,
 				D610022B22C4967100DD16AA /* View */,
 				D610022622C4708A00DD16AA /* MainVC */,
 				D61001F822C46D3F00DD16AA /* AppDelegate.swift */,
-				D61001FA22C46D3F00DD16AA /* ViewController.swift */,
-				D6E8A0C922CC59CD00BA589B /* INFProductInfoViewController.swift */,
 				D6E8A0CF22CC8B6C00BA589B /* INFConst.swift */,
-				D6F044D122D0A2F100383ACE /* INFSelectMenuViewController.swift */,
-				D6F044D322D0A39C00383ACE /* INFSelectMenuTableViewController.swift */,
-				D6A3D27B22D5C01F00805F98 /* INFMenuProductController.swift */,
 				D6CD76CC22CB3D7F00D882ED /* INFUIViewFrame.swift */,
 				D61001FC22C46D3F00DD16AA /* Main.storyboard */,
 				D61001FF22C46D4000DD16AA /* Assets.xcassets */,
@@ -259,6 +294,9 @@
 				D6A3D27922D5953E00805F98 /* INFMenuProductCell.xib */,
 				D6A3D27D22D5D9BC00805F98 /* INFProductHeaderView.swift */,
 				D60077DC22D815B5000B17F5 /* INFSelectMenuCell.swift */,
+				D60077E322D83536000B17F5 /* INFMineMessageCell.swift */,
+				D60077E422D83536000B17F5 /* INFMineMessageCell.xib */,
+				D6D2F58A22DC6C41003D5015 /* INFMineHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -277,6 +315,7 @@
 				D6CD76C222CAE2C800D882ED /* INFTabBarAnimation.swift */,
 				D6CD76D022CB56B700D882ED /* INFTransitionAnimator.swift */,
 				D6CD76D222CB5D3800D882ED /* INFImageTransition.swift */,
+				D6D2F58C22DC763C003D5015 /* INFFrameAnimator.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -396,6 +435,7 @@
 				D6F044D022D0927A00383ACE /* INFAddSelectMenuView.xib in Resources */,
 				D6A3D27A22D5953E00805F98 /* INFMenuProductCell.xib in Resources */,
 				D6CD76CB22CAFAB900D882ED /* INFThemeMadeView.xib in Resources */,
+				D60077E622D83536000B17F5 /* INFMineMessageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6A3D27C22D5C01F00805F98 /* INFMenuProductController.swift in Sources */,
+				D60077E522D83536000B17F5 /* INFMineMessageCell.swift in Sources */,
 				D61001FB22C46D3F00DD16AA /* ViewController.swift in Sources */,
 				D610022D22C4971700DD16AA /* INFSearchNavView.swift in Sources */,
 				D6F044D422D0A39C00383ACE /* INFSelectMenuTableViewController.swift in Sources */,
@@ -532,7 +573,10 @@
 				D6E8A0CA22CC59CD00BA589B /* INFProductInfoViewController.swift in Sources */,
 				D60077DD22D815B5000B17F5 /* INFSelectMenuCell.swift in Sources */,
 				D6CD76CD22CB3D7F00D882ED /* INFUIViewFrame.swift in Sources */,
+				D6D2F58D22DC763C003D5015 /* INFFrameAnimator.swift in Sources */,
 				D6CD76C722CAF63000D882ED /* INFThemeSheet.swift in Sources */,
+				D6D2F58B22DC6C41003D5015 /* INFMineHeaderView.swift in Sources */,
+				D60077E222D83486000B17F5 /* INFMineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

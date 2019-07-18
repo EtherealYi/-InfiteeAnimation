@@ -21,7 +21,7 @@ class INFNavigationController: UINavigationController, UINavigationControllerDel
         
     }
     
-    func pushToVC(viewControllrt: UIViewController, animator: INFTransitionAnimator) -> Void {
+    func pushToVC(viewControllrt: UIViewController, animator: INFTransitionAnimator?) -> Void {
         self.animator = animator
         self.pushViewController(viewControllrt, animated: true)
     }

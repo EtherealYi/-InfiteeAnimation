@@ -11,7 +11,7 @@ import UIKit
 class INFTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     /// 转场时间
-    public var duration: TimeInterval = 0.6
+    public var duration: TimeInterval = 0.5
     /// 转场的上下文
     public var context: UIViewControllerContextTransitioning!
     /// 源控制器

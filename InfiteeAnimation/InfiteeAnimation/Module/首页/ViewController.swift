@@ -157,20 +157,6 @@ extension ViewController {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.section {
-//        case 0:
-//            let cell = collectionView.cellForItem(at: indexPath) as! INFThemeCell
-//
-//            let animtor = INFImageTransition()
-//            animtor.duration = 0.5
-//            animtor.imageViewRect = CGRect(x: 0, y: 88, width: UIScreen.main.bounds.width, height: kThemeImageHeight)
-//            animtor.transitionimageView = cell.backImageView
-//            if let navgation: INFNavigationController = self.navigationController as? INFNavigationController{
-//
-////                let vc = INFProductInfoViewController()
-////                vc.hidesBottomBarWhenPushed = true
-////                navgation.pushToVC(viewControllrt: vc, animator: animtor)
-//            }
-//            break
         case 0:
             let cell = collectionView.cellForItem(at: indexPath)
             let sheetView = INFThemeSheet.sheetWithshotView(view: cell!)

@@ -8,6 +8,8 @@ target 'InfiteeAnimation' do
   # Pods for InfiteeAnimation
   pod 'SnapKit'
   pod 'PullToRefreshKit'
+  pod 'ESTabBarController-swift'
+  
   target 'InfiteeAnimationTests' do
     inherit! :search_paths
     # Pods for testing

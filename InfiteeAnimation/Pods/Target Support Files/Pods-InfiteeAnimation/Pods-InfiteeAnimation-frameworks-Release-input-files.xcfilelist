@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-InfiteeAnimation/Pods-InfiteeAnimation-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework
 ${BUILT_PRODUCTS_DIR}/PullToRefreshKit/PullToRefreshKit.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework

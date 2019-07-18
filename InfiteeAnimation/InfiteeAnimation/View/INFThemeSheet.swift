@@ -112,28 +112,64 @@ extension INFThemeSheet{
     func startAnimation() -> Void {
         fromView?.isHidden = true
         effectView.isUserInteractionEnabled = false
+        let width = self.view.frame.size.width - 80
+        let height = self.view.frame.size.height * 0.55
         self.view.setNeedsLayout()
-        UIView.animate(withDuration: self.duration, delay: 0, usingSpringWithDamping: dampingRatio, initialSpringVelocity: 0, options: UIView.AnimationOptions.curveLinear, animations: {
+        UIView.animate(withDuration: self.duration, delay: 0, usingSpringWithDamping: dampingRatio, initialSpringVelocity: 0, options: UIView.AnimationOptions.curveEaseIn, animations: {
+
             
-            let width = self.view.frame.size.width - 80
-            let height = self.view.frame.size.height * 0.55
             self.contentView.frame.size.width = width
-//            self.contentView.frame.size.height = height
+
             self.contentView.height = height
             self.contentView.center = self.view.center
-            
+
             self.madeView?.frame.size.width = width
             self.madeView?.frame.size.height = height
-           
+
             self.madeView?.center = CGPoint(x: width/2, y: height/2)
-            
+
             self.snapView?.alpha = 0
-            
+
             self.madeView?.alpha = 1
             self.view.layoutIfNeeded()
         }) { (_) in
             self.effectView.isUserInteractionEnabled = true
         }
+        
+//        let contentBoundsAnim = CASpringAnimation(keyPath: "bounds.size")
+//        contentBoundsAnim.duration = self.duration
+//        contentBoundsAnim.fromValue = contentView.layer.bounds.size
+//        let width = self.view.frame.size.width - 80
+//        let height = self.view.frame.size.height * 0.55
+//        contentBoundsAnim.toValue = CGSize(width: width, height: height)
+//        contentBoundsAnim.mass = 1
+//        contentBoundsAnim.stiffness = 60
+//        contentBoundsAnim.damping = 9
+//
+//        let contentPositionAnim = CASpringAnimation(keyPath: "position")
+//        contentPositionAnim.fromValue = contentView.layer.position
+//        contentPositionAnim.toValue = self.view.layer.position
+//        contentPositionAnim.mass = 1
+//        contentPositionAnim.stiffness = 60
+//        contentPositionAnim.damping = 9
+//
+//        let group = CAAnimationGroup()
+//        group.duration = self.duration
+//        group.animations = [contentBoundsAnim, contentPositionAnim]
+//        group.fillMode = .both
+//        group.isRemovedOnCompletion = false
+//        contentView.layer.add(group, forKey: "")
+//
+//        let madeAlphaAnim = CABasicAnimation(keyPath: "opacity")
+//        madeAlphaAnim.fromValue = 0
+//        madeAlphaAnim.toValue = 1
+//
+//        let madeGroup = CAAnimationGroup()
+//        madeGroup.animations = [contentPositionAnim, contentBoundsAnim, madeAlphaAnim]
+//        madeGroup.duration = self.duration
+//        madeGroup.fillMode = .forwards
+//        madeGroup.isRemovedOnCompletion = false
+//        madeView?.layer.add(madeGroup, forKey: "made_group")
     }
     
     func closeAnimation() -> Void {

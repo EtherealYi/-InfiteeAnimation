@@ -1,20 +1,24 @@
 PODS:
+  - ESTabBarController-swift (2.7)
   - PullToRefreshKit (0.8.8)
   - SnapKit (5.0.0)
 
 DEPENDENCIES:
+  - ESTabBarController-swift
   - PullToRefreshKit
   - SnapKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - ESTabBarController-swift
     - PullToRefreshKit
     - SnapKit
 
 SPEC CHECKSUMS:
+  ESTabBarController-swift: 4fb52ad03d94d0717ef97bc9eb09a5abfdded0a2
   PullToRefreshKit: 7cc53e720e69f135cffa1a57784dfb534f0222ab
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
 
-PODFILE CHECKSUM: 124000ea0a65e92fa87cc7d4855712f301856703
+PODFILE CHECKSUM: 76b9564ad0bde5a71e26de943f7fd02cb2f1d541
 
 COCOAPODS: 1.7.2

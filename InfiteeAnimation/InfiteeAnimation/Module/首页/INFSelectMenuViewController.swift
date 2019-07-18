@@ -8,7 +8,7 @@
 
 import UIKit
 
-class INFSelectMenuViewController: INFBaseViewController, INFSelectMenuTableViewControllerDelgate, INFMenuProductControllerDelegate {
+class INFSelectMenuViewController: INFBaseViewController, INFSelectMenuTableViewControllerDelgate, INFMenuProductControllerDelegate, CAAnimationDelegate {
 
     
     var menuViewController: INFSelectMenuTableViewController!
@@ -70,12 +70,13 @@ class INFSelectMenuViewController: INFBaseViewController, INFSelectMenuTableView
             make.left.equalTo(menuViewController.view.snp.right)
         }
         
-        closeButton.snp.makeConstraints { (make) in
-            make.bottom.equalTo(view.snp.bottom).offset(-40)
-            make.left.equalTo(view.snp.left).offset(40)
+        self.closeButton.snp.makeConstraints { (make) in
+//            make.bottom.equalTo(self.view.snp.bottom).offset(-40)
+            make.bottom.equalTo(view.snp.bottom).offset(20)
+            make.left.equalTo(self.view.snp.left).offset(40)
             make.size.equalTo(CGSize(width: 40, height: 40))
         }
-        
+      
         menuViewController.setupData(menuArray: menuArray)
         productViewController.setupData(menuArray: menuArray)
     }
@@ -101,14 +102,22 @@ class INFSelectMenuViewController: INFBaseViewController, INFSelectMenuTableView
 extension INFSelectMenuViewController {
  
     private func closeButtonAnimation() -> Void {
-        let animation = CABasicAnimation()
+        let animation = CASpringAnimation()
+        animation.delegate = self
+        animation.duration = 1
+//        animation.keyPath = "transform.scale"
         animation.keyPath = "position.y"
-        animation.duration = 0.6
         animation.fromValue = view.height
         animation.toValue = view.height - 60
+//        animation.fromValue = 0
+//        animation.toValue = 1
+        animation.mass = 2
+        animation.stiffness = 60
+        animation.damping = 9
         animation.fillMode = .forwards
-        animation.isRemovedOnCompletion = true
-        closeButton.layer.add(animation, forKey: "")
+        animation.isRemovedOnCompletion = false
+        closeButton.layer.add(animation, forKey: "close_animation")
+        
     }
     
     func menuVCselectAtIndex(index: Int) {
@@ -117,5 +126,13 @@ extension INFSelectMenuViewController {
     
     func productVCselectAtIndex(index: Int) {
         menuViewController.scrollToSection(index: index)
+    }
+    
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        if flag {
+            self.closeButton.snp.updateConstraints { (make) in
+                make.bottom.equalTo(self.view.snp.bottom).offset(-40)
+            }
+        }
     }
 }
