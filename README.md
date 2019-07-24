@@ -31,31 +31,31 @@
 
 ## 部分代码展示
 ```
-    let positAnimation = CABasicAnimation()
-	positAnimation.keyPath = "position"
-	positAnimation.fromValue = closeButton.center
-	let centerX = self.frame.size.width - 25
-	let toPoint = CGPoint(x: centerX, y: closeButton.center.y)
-	positAnimation.toValue = toPoint
-	
-	positAnimation.fillMode = .forwards
-	positAnimation.isRemovedOnCompletion = false
-	
-	let rotationAnimation = CABasicAnimation()
-	rotationAnimation.keyPath = "transform.rotation.z"
-	rotationAnimation.fromValue = 0
-	rotationAnimation.toValue = Double.pi
-	rotationAnimation.fillMode = .forwards
-	rotationAnimation.isRemovedOnCompletion = false
-	
-	let groupAnimation = CAAnimationGroup()
-	groupAnimation.animations = [positAnimation, rotationAnimation]
-	groupAnimation.delegate = self
-	groupAnimation.duration = 0.4
-	groupAnimation.fillMode = .forwards
-	groupAnimation.isRemovedOnCompletion = false
-	groupAnimation.setValue(toPoint, forKey: "posit")
-	closeButton.layer.add(groupAnimation, forKey: nil)
+ let positAnimation = CABasicAnimation()
+positAnimation.keyPath = "position"
+positAnimation.fromValue = closeButton.center
+let centerX = self.frame.size.width - 25
+let toPoint = CGPoint(x: centerX, y: closeButton.center.y)
+positAnimation.toValue = toPoint
+
+positAnimation.fillMode = .forwards
+positAnimation.isRemovedOnCompletion = false
+
+let rotationAnimation = CABasicAnimation()
+rotationAnimation.keyPath = "transform.rotation.z"
+rotationAnimation.fromValue = 0
+rotationAnimation.toValue = Double.pi
+rotationAnimation.fillMode = .forwards
+rotationAnimation.isRemovedOnCompletion = false
+
+let groupAnimation = CAAnimationGroup()
+groupAnimation.animations = [positAnimation, rotationAnimation]
+groupAnimation.delegate = self
+groupAnimation.duration = 0.4
+groupAnimation.fillMode = .forwards
+groupAnimation.isRemovedOnCompletion = false
+groupAnimation.setValue(toPoint, forKey: "posit")
+closeButton.layer.add(groupAnimation, forKey: nil)
 ```
 
 ## 运行
