@@ -1,5 +1,6 @@
- ![image](https://github.com/MaterYi/-InfiteeAnimation/blob/master/Fodder/InfiteeAnimation.png)<div style="align: center">
-<img src="https://github.com/MaterYi/-InfiteeAnimation/blob/master/Fodder/InfiteeAnimation.png"/>
+ ![image](https://github.com/MaterYi/-InfiteeAnimation/blob/master/Fodder/InfiteeAnimation.png)
+<div style="align: center">
+<img src="https://github.com/MaterYi/-InfiteeAnimation/blob/master/Fodder/InfiteeAnimation.png" width="800" height="600"/>
 </div>
 
 ## InfiteeAnimation,优秀的入门iOS动画Demo
