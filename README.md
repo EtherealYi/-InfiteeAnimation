@@ -11,10 +11,15 @@
 
 ## 涉及技术要点
 - CAAnimation 
+
 项目主要使用CAAnimation库构建动画,包括其各种子类，CASpringAnimation，CAAnimationGroup,CAKeyframeAnimation。
+
 - 自定义转场动画
+
 自定义Navigation转场动画
+
 - tableviewCell动画
+
 自定义tableviewCell动画
 
 ## 展示
@@ -48,6 +53,9 @@
 	groupAnimation.setValue(toPoint, forKey: "posit")
 	closeButton.layer.add(groupAnimation, forKey: nil)
 ```
+
+## 运行
+`git clone`项目之后直接点击`InfiteeAnimation.xcworkspace`运行
 
 ## 后续更新
 - 完善Infintee其他动画效果
