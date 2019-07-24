@@ -31,7 +31,8 @@
 
 ## 部分代码展示
 ```
- let positAnimation = CABasicAnimation()
+
+let positAnimation = CABasicAnimation()
 positAnimation.keyPath = "position"
 positAnimation.fromValue = closeButton.center
 let centerX = self.frame.size.width - 25
