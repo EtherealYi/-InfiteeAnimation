@@ -9,6 +9,7 @@ target 'InfiteeAnimation' do
   pod 'SnapKit'
   pod 'PullToRefreshKit'
   pod 'ESTabBarController-swift'
+  pod 'LookinServer', :configurations => ['Debug']
   
   target 'InfiteeAnimationTests' do
     inherit! :search_paths
