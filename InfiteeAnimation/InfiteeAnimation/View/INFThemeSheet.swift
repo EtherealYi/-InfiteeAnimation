@@ -25,7 +25,7 @@ class INFSnapView: UIView {
 
 class INFThemeSheet: UIViewController {
 
-    public var duration: Double = 1.0
+    public var duration: Double = 1.1
     private var dampingRatio: CGFloat = 0.9
     private var contentView: UIView = UIView()
     private var effectView: UIVisualEffectView!
